@@ -4,7 +4,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin, LoginManager, login_user, logout_user, login_required, current_user
 import requests
 import pymysql
-
+import pymssql
 app = Flask(__name__)
 from flask_migrate import Migrate
 
@@ -13,7 +13,7 @@ from flask_migrate import Migrate
 
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://nirmal:Nethaji123@nethaji.database.windows.net/nirmal'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mssql+pymssql://sibi:Lenovo123@neog.database.windows.net/neog'
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost/neth'
 app.config['SECRET_KEY'] = '9OLWxND4o83j4K4iuopO'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
